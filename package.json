@@ -1,0 +1,22 @@
+{
+  "name": "american-sniper",
+  "version": "1.0.0",
+  "description": "Snipe products",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Wowkster",
+  "license": "ISC",
+  "dependencies": {
+    "@wowkster/prettier-config": "^1.0.1",
+    "ajv": "^8.6.3",
+    "puppeteer": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  },
+  "prettier": "@wowkster/prettier-config"
+}

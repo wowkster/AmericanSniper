@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Credentials": {
+            "additionalProperties": {
+                "items": {
+                    "properties": {
+                        "email": {
+                            "type": "string"
+                        },
+                        "password": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "type": "object"
+        },
+        "Product": {
+            "properties": {
+                "skus": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "price": {
+                    "properties": {
+                        "max": {
+                            "type": "number"
+                        },
+                        "min": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                },
+                "store": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "credentials": {
+            "$ref": "#/definitions/Credentials"
+        },
+        "max_instances": {
+            "type": "number"
+        },
+        "mode": {
+            "enum": [
+                "development",
+                "production",
+                "test"
+            ],
+            "type": "string"
+        },
+        "products": {
+            "items": {
+                "$ref": "#/definitions/Product"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}

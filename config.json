@@ -1,0 +1,23 @@
+{
+    "products": [
+        {
+            "name": "USB Stick",
+            "store": "amazon",
+            "skus": [
+                "B09JP4LNXG"
+            ],
+            "price": {
+                "min": 5,
+                "max": 15
+            }
+        }
+    ],
+    "max_instances": 1,
+    "mode": "test",
+    "credentials": {
+        "amazon": {
+            "email": "email@example.com",
+            "password": "Pa$$w0rd1"
+        }
+    }
+}
